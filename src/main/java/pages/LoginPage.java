@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     private WebDriver driver;
     private By usernameFiled=By.id("username");
-    private By password=By.id("password");
+    private By passwordField=By.id("password");
     private By loginButton=By.cssSelector("#login button");
 
     public LoginPage(WebDriver driver){
@@ -17,7 +17,7 @@ public class LoginPage {
         driver.findElement(usernameFiled).sendKeys(username);
     }
     public void setPassword(String password){
-        driver.findElement(usernameFiled).sendKeys(password);
+        driver.findElement(passwordField).sendKeys(password);
     }
 
     public SecureAreaPage clickLoginButton(){
